@@ -43,6 +43,7 @@ button {
             &:disabled {
                 background-color: $disabledColor;
                 color: $disabledBackground;
+                cursor: default;
 
                 &:hover {
                     opacity: 1;
