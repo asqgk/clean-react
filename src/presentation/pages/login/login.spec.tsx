@@ -42,9 +42,9 @@ const populatePasswordField = (sut: RenderResult, password = faker.internet.pass
 }
 
 const simulateStatusForField = (sut: RenderResult, fieldName: string, validationError?: string): void => {
-  const emailStatus = sut.getByTestId(`${fieldName}-status`)
-  expect(emailStatus.title).toBe(validationError || 'Tudo certo!')
-  expect(emailStatus.textContent).toBe(validationError ? '🔴' : '🟢')
+  const status = sut.getByTestId(`${fieldName}-status`)
+  expect(status.title).toBe(validationError || 'Tudo certo!')
+  expect(status.textContent).toBe(validationError ? '🔴' : '🟢')
 }
 
 describe('Login Component', () => {
