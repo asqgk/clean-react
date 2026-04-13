@@ -1,6 +1,6 @@
-@import "../../styles/colors.scss";
+@use "../../styles/colors";
 
 .footer {
-    background-color: $primary;
+    background-color: colors.$primary;
     height: 48px;
 }

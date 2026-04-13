@@ -1,4 +1,4 @@
-@import "../../styles/colors.scss";
+@use "../../styles/colors";
 
 .errorWrap {
     display: flex;
@@ -11,6 +11,6 @@
 
     .error {
         margin-top: 30px;
-        color: $primaryLight;
+        color: colors.$primaryLight;
     }
 }

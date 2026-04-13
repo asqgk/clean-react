@@ -1,9 +1,9 @@
-@import "../../styles/colors.scss";
+@use "../../styles/colors";
 
 button {
-    background-color: $primary;
+    background-color: colors.$primary;
     line-height: 60px;
-    color: $white;
+    color: colors.$white;
     border-radius: 8px;
     font-size: 16px;
     border: none;
@@ -24,14 +24,13 @@ button {
         display: flex;
         flex-direction: column;
         width: 400px;
-        background-color: $white;
+        background-color: colors.$white;
         padding: 40px;
         border-radius: 8px;
         align-self: center;
-        box-shadow: 0px 1px 3px -1px $black;
-
+        box-shadow: 0px 1px 3px -1px colors.$black;
         h2 {
-            color: $primaryDark;
+            color: colors.$primaryDark;
             text-align: center;
             font-size: 20px;
             text-transform: uppercase;
@@ -41,8 +40,8 @@ button {
             margin-top: 20px;
 
             &:disabled {
-                background-color: $disabledColor;
-                color: $disabledBackground;
+                background-color: colors.$disabledColor;
+                color: colors.$disabledBackground;
                 cursor: default;
 
                 &:hover {
@@ -53,7 +52,7 @@ button {
 
         .link {
             text-align: center;
-            color: $primary;
+            color: colors.$primary;
             text-transform: lowercase;
             margin-top: 16px;
             cursor: pointer;

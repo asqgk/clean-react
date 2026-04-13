@@ -1,4 +1,4 @@
-@import "../../styles/colors.scss";
+@use "../../styles/colors";
 
 .spinner {
     display: inline-block;
@@ -12,7 +12,7 @@
         width: 13px;
         height: 13px;
         border-radius: 50%;
-        background: $primaryLight;
+        background: colors.$primaryLight;
         animation-timing-function: cubic-bezier(0, 1, 1, 0);
 
         &:nth-child(1) {
