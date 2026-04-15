@@ -28,7 +28,7 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
       emailError: validation.validate('email', state.email),
       passwordError: validation.validate('password', state.password)
     })
-    validation.validate('email', state.email)
+    // validation.validate('email', state.email)
   }, [state.email, state.password])
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
@@ -62,7 +62,7 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
           <Input type="email" name='email' placeholder='Digite seu e-mail' />
           <Input type="password" name='password' placeholder='Digite sua senha' />
           <button data-testid="submit" disabled={!!state.emailError || !!state.passwordError} className={Styles.submit} type='submit'>Entrar</button>
-          <Link to="/signup" data-testid="register" className={Styles.link}>Criar conta</Link>
+          <Link data-testid="signup" to="/signup" className={Styles.link}>Criar conta</Link>
           <FormStatus />
         </form>
       </Context.Provider>
