@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/main/index.tsx',
   output: {
     path: path.join(__dirname, 'public/js'),
-    publicPath: '/public/js',
+    publicPath: '/js/',
     filename: 'bundle.js'
   },
   resolve: {
@@ -33,12 +33,15 @@ module.exports = {
     }]
   },
   devServer: {
-    static: './public',
     historyApiFallback: true,
-    devMiddleware: {
-      writeToDisk: true
-    },
-    port: 3000
+    port: 3000,
+    proxy: {
+      '/api': {
+        target: 'http://fordevs.herokuapp.com',
+        changeOrigin: true,
+        secure: false
+      }
+    }
   },
   externals: {
     react: 'React',

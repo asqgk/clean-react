@@ -5,7 +5,7 @@ import { Login } from '@/presentation/pages'
 import { ValidationBuilder, ValidationComposite } from '@/validation/validators'
 
 export const makeLogin: React.FC = () => {
-  const url = 'http://fordevs.herokuapp.com/api/login'
+  const url = '/api/login'
   const axiosHttpClient = new AxiosHttpClient()
   const remoteAuthentication = new RemoteAuthentication(url, axiosHttpClient)
   const validationComposite = ValidationComposite.build([
