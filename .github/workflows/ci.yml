@@ -23,5 +23,11 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      - name: Test
-        run: npm run test:coveralls
+      - name: Test (generate coverage)
+        run: npm run test:ci
+
+      - name: Upload coverage to Coveralls
+        run: cat coverage/lcov.info | npx coveralls
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          COVERALLS_SERVICE_NAME: github

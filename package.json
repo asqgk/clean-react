@@ -17,7 +17,7 @@
     "test:watch": "npm test -- --watch",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
-    "test:coveralls": "npm run test:ci && coveralls < coverage/lcov.info",
+    "test:coveralls": "cat coverage/lcov.info | coveralls",  
     "test:cypress": "cypress open",
     "test:cypress:run": "cypress run",
     "test:cypress:ci": "start-server-and-test dev:base http-get://localhost:8080 test:cypress:run",
