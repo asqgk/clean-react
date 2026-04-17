@@ -8,7 +8,7 @@
   "license": "GNU GPL3",
   "scripts": {
     "start": "webpack-dev-server --open",
-    "lint": "eslint .",
+    "lint": "eslint 'src/**'",
     "lint:fix": "npm run lint -- --fix",
     "dev:base": "webpack-dev-server --config webpack.dev.js",
     "dev": "npm run dev:base -- --open",
